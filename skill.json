@@ -1,0 +1,38 @@
+{
+  "name": "genpark-unified-streaming-ai-gateway-fallback-router-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Unified streaming AI gateway routing multi-provider LLM requests with automatic fallback and schema streaming.",
+  "author": "genpark",
+  "category": "ai-gateway",
+  "tags": [
+    "vercel-ai",
+    "ai-gateway",
+    "streaming-fallback",
+    "circuit-breaker",
+    "multi-provider-router"
+  ],
+  "inputs": {
+    "request_payload": {
+      "type": "object"
+    },
+    "primary_provider": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "routing_session_id": {
+      "type": "string"
+    },
+    "active_provider": {
+      "type": "string"
+    },
+    "fallback_providers_ready": {
+      "type": "array"
+    },
+    "gateway_proxy_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
